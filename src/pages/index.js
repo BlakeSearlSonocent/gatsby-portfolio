@@ -10,6 +10,7 @@ export default () => {
   return <Layout>
     <Hero/>
     <Services/>
+    <Jobs></Jobs>
   </Layout>
 }
 // ...GatsbyImageSharpFluid
