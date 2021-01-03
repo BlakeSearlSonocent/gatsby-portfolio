@@ -10,28 +10,18 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaFacebookSquare className="social-icon"/>,
+    url: "https://www.facebook.com/BlakeSearl",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaLinkedin className="social-icon"/>,
+    url: "https://uk.linkedin.com/in/blake-searl-031767a8",
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 4,
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 5,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaTwitterSquare className="social-icon"/>,
+    url: "https://twitter.com/BlakeSearl",
   },
 ]
 const links = data.map(link => {
