@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
+import SEO from "../components/SEO"
 
 export const query = graphql`
   {
@@ -32,6 +33,7 @@ const About = ({data:{about:{nodes}}}) => {
 
   return (
     <Layout className="about-page">
+      <SEO title="About" description="about Blake Searl"/>
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img"/>
