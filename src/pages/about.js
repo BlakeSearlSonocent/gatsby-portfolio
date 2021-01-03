@@ -7,7 +7,7 @@ import SEO from "../components/SEO"
 
 export const query = graphql`
   {
-    about:allStrapiAbout {
+    about: allStrapiAbout {
       nodes {
         stack {
           id
@@ -27,27 +27,30 @@ export const query = graphql`
   }
 `
 
-
-const About = ({data:{about:{nodes}}}) => {
-  const {title, stack, image, info} = nodes[0]
+const About = ({
+  data: {
+    about: { nodes },
+  },
+}) => {
+  const { title, stack, image, info } = nodes[0]
 
   return (
     <Layout className="about-page">
-      <SEO title="About" description="about Blake Searl"/>
+      <SEO title="About" description="about Blake Searl" />
       <section className="about-page">
         <div className="section-center about-center">
-          <Image fluid={image.childImageSharp.fluid} className="about-img"/>
+          <Image fluid={image.childImageSharp.fluid} className="about-img" />
           <article className="about-text">
-            <Title title={title}/>
+            <Title title={title} />
             <p>{info}</p>
             <div className="about-stack">
               {stack.map(item => {
-              return <span key={item.id}>{item.title}</span>
+                return <span key={item.id}>{item.title}</span>
               })}
             </div>
           </article>
         </div>
-     </section>
+      </section>
     </Layout>
   )
 }

@@ -21,9 +21,7 @@
     "image": {
       "model": "file",
       "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "plugin": "upload",
       "required": true
     },
@@ -34,12 +32,7 @@
     },
     "category": {
       "type": "enumeration",
-      "enum": [
-        "gatsby",
-        "javascript",
-        "react",
-        "html"
-      ],
+      "enum": ["gatsby", "javascript", "react", "html"],
       "required": true,
       "default": "gatsby"
     },

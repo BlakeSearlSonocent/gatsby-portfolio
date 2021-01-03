@@ -10,7 +10,7 @@ import SEO from "../components/SEO"
 
 export const query = graphql`
   {
-    allStrapiProjects(filter: {featured: {eq: true}}) {
+    allStrapiProjects(filter: { featured: { eq: true } }) {
       nodes {
         github
         id
@@ -30,8 +30,8 @@ export const query = graphql`
         }
       }
     }
-    
-    allStrapiBlogs(sort: {fields: date, order: DESC}, limit: 3) {
+
+    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
         slug
         description
@@ -51,18 +51,20 @@ export const query = graphql`
   }
 `
 
-export default ({data}) => {
+export default ({ data }) => {
   const {
-    allStrapiProjects: {nodes:projects}
-  , allStrapiBlogs: {nodes:blogs}
+    allStrapiProjects: { nodes: projects },
+    allStrapiBlogs: { nodes: blogs },
   } = data
 
-  return <Layout>
-    <SEO title="Home" description="This is the home page"/>
-    <Hero/>
-    <Services/>
-    <Jobs/>
-    <Projects projects={projects} title="featured projects" showLink/>
-    <Blogs blogs={blogs} title="latest blogs" showLink/>
-  </Layout>
+  return (
+    <Layout>
+      <SEO title="Home" description="This is the home page" />
+      <Hero />
+      <Services />
+      <Jobs />
+      <Projects projects={projects} title="featured projects" showLink />
+      <Blogs blogs={blogs} title="latest blogs" showLink />
+    </Layout>
+  )
 }

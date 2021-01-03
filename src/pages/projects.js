@@ -29,13 +29,22 @@ export const query = graphql`
   }
 `
 
-const ProjectsPage = ({ data: {allStrapiProjects: {nodes:projects}} }) => {
-  return <Layout>
-    <SEO title="Projects" description="My projects and projects that I have been involved in"/>
-    <section className="projects-page">
-      <Projects projects={projects} title="all projects"/>
-    </section>
-  </Layout>
+const ProjectsPage = ({
+  data: {
+    allStrapiProjects: { nodes: projects },
+  },
+}) => {
+  return (
+    <Layout>
+      <SEO
+        title="Projects"
+        description="My projects and projects that I have been involved in"
+      />
+      <section className="projects-page">
+        <Projects projects={projects} title="all projects" />
+      </section>
+    </Layout>
+  )
 }
 
 export default ProjectsPage

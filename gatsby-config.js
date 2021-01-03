@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: "Blake's blog",
-    description: "Blake Searl's portfolio and blog. Random musings around things" +
+    description:
+      "Blake Searl's portfolio and blog. Random musings around things" +
       " that I like and find interesting.",
     author: "Blake Searl",
     twitterUsername: "Blake Searl",
